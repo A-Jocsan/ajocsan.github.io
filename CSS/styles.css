@@ -1,0 +1,179 @@
+:root {
+    --bg: #0a0f14;
+    --bg-soft: #101820;
+    --cian: #2de2e6;
+    --cian-soft: #7df9ff;
+    --white: #e8f9ff;
+    --gray: #9aa7b2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(40px, 8vw, 120px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    font-size: clamp(6rem, 20vw, 18rem);
+    font-weight: 800;
+    color: rgba(45, 226, 230, 0.05);
+    top: 50%;
+    left: -5%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    z-index: 1;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--gray);
+    max-width: 600px;
+    z-index: 1;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: clamp(80px, 12vw, 140px);
+    background-color: var(--bg-soft);
+}
+
+.about h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--cian);
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 850px;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+/* ================= QUOTE ================= */
+.quote {
+    padding: clamp(70px, 10vw, 120px);
+    text-align: center;
+}
+
+.quote h2 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    color: var(--cian-soft);
+    font-weight: 300;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+    padding: clamp(80px, 12vw, 140px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(20px, 4vw, 35px);
+}
+
+.info-card {
+    background: linear-gradient(145deg, #111b24, #0c131a);
+    padding: clamp(22px, 4vw, 32px);
+    border-radius: 16px;
+    border: 1px solid rgba(45, 226, 230, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.info-card h3 {
+    color: var(--cian);
+    margin-bottom: 12px;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.info-card p {
+    color: var(--gray);
+    font-size: clamp(0.95rem, 2.4vw, 1rem);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(45, 226, 230, 0.25);
+}
+
+/* ================= PERSONAL ================= */
+.personal {
+    padding: clamp(90px, 12vw, 160px);
+    position: relative;
+    background-color: var(--bg-soft);
+    overflow: hidden;
+}
+
+.personal-bg {
+    position: absolute;
+    font-size: clamp(5rem, 18vw, 14rem);
+    font-weight: 800;
+    color: rgba(45, 226, 230, 0.04);
+    bottom: -40px;
+    right: -20px;
+    pointer-events: none;
+}
+
+.personal p {
+    max-width: 900px;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    position: relative;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    padding: clamp(60px, 10vw, 100px) clamp(30px, 8vw, 80px) 40px;
+    text-align: center;
+}
+
+.footer h3 {
+    color: var(--cian);
+    margin-bottom: 25px;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: clamp(0.95rem, 2.5vw, 1rem);
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--cian);
+    border-bottom: 1px solid var(--cian);
+}
+
+.copy {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
