@@ -1,8 +1,4 @@
-/* ===============================
-   Animación de tarjetas al hacer scroll
-   =============================== */
-
-const infoCards = document.querySelectorAll('.info-card');
+const elements = document.querySelectorAll('.info-card, .reveal');
 
 const observer = new IntersectionObserver(
     entries => {
@@ -12,17 +8,7 @@ const observer = new IntersectionObserver(
             }
         });
     },
-    {
-        threshold: 0.25
-    }
+    { threshold: 0.25 }
 );
 
-infoCards.forEach(card => observer.observe(card));
-
-/* ===============================
-   Efecto de entrada suave (fallback)
-   =============================== */
-
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
+elements.forEach(el => observer.observe(el));

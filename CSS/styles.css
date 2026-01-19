@@ -97,7 +97,14 @@ body {
     padding: clamp(22px, 4vw, 32px);
     border-radius: 16px;
     border: 1px solid rgba(45, 226, 230, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.info-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .info-card h3 {
@@ -176,4 +183,16 @@ body {
 .copy {
     font-size: 0.85rem;
     color: var(--gray);
+}
+
+/* ================= REVEAL ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s ease;
 }
